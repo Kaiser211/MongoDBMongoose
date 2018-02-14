@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Rabbit</title>
+</head>
+<body>
+	 <form action="/rabbits/new" method="post">
+         <%if(typeof(errors) != "undefined"){%> 
+            <%for(error in errors){%>
+                <h2><%=errors[error].message%></h2>
+            <%}%>
+         <%}%>  
+		
+	     <label for="name">Name:
+	     	 <input type="text" name="name" id="name">
+	     </label>
+
+	     <label for="age">Age:
+	     	 <input type="text" name="age" id="age">
+	     </label>
+
+	     <label for="carrots">Number of Carrots:
+	     	 <input type="text" name="carrots" id="carrots">
+	     </label>
+
+	     <input type="submit" value="Create">
+
+	 </form> 
+
+</body>
+</html>

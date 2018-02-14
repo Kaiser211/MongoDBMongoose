@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rabbits!</title>
+</head>
+<body>
+        <table>
+        	<tr>
+        		<th>Name:</th>
+        		<th>Age:</th>
+        		<th>Carrots:</th>
+        		<th>Actions:</th>
+
+        	</tr>
+        	
+            <%for (rabbit in rabbits){%>
+        	<tr>
+        		<td>rabbits[rabbit].name%></td>
+        		<td>rabbits[rabbit].age%></td>
+        		<td>rabbits[rabbit].carrots%></td>
+        		<td><a href="/rabbits/<%=rabbits[rabbit].id%>">Show</a><a href="/rabbits/edit/<%=rabbits[rabbit].id%>">Edit</a><a href="/rabbits/destroy/<%=rabbits[rabbit].id%>">Delete</a></td>
+        	</tr>
+
+             <%}%>
+        </table>
+
+        <a href="/rabbits/new">Add a Rabbit</a>
+</body>
+</html>

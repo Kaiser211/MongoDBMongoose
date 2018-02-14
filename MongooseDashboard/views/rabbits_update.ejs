@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Chipmunk</title>
+</head>
+<body>
+    
+    <%if(typeof(errors) != "undefined"){%> 
+        <%for(error in errors){%>
+            <h2><%=errors[error].message%></h2>
+        <%}%>
+     <%}%> 
+    
+        <%if(typeof(rabbit) != "undefined"){%> 
+        <form action="/rabbits/edit/<%=rabbit.id%>" method="post">
+            <label for="name">Name:
+                <input type="text" name="name" id="name" value="<%=rabbit.name%>">
+            </label>
+            <label for="age">Age:
+                <input type="text" name="age" id="age" value="<%=rabbit.age%>">
+            </label>
+            <label for="carrots">Carrots:
+                <input type="text" name="carrots" id="carrots" value="<%=rabbit.carrots%>">
+            </label>
+            <input type="submit">
+        </form>
+      <%}%> 
+</body>
+</html
